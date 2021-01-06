@@ -14,6 +14,29 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+
+  # hooks ===============================================================
+  # config.before(:suite) do
+  #   puts "ANTES DE TODA A SUITE DE TESTES!!!!!!!!!!!!!!!!!!!!!!1111"
+  # end
+
+  # config.before(:all) do
+  #   puts "ANTES DE todos OS TESTES!!!!!!!!!!!!!!!!!!!!!!1111"
+  # end
+
+  # config.after(:suite) do
+  #   puts "DEPOIS DE TODA A SUITE DE TESTES!!!!!!!!!!!!!!!!!!!!!!1111"
+  # end
+
+  # config.after(:context) do
+  #   puts "DEPOIS DE TODOS OS TESTES TESTES!!!!!!!!!!!!!!!!!!!!!!1111"
+  # end
+  # =====================================================================
+
+  config.define_derived_metadata do |meta|
+    meta[:aggregate_failures]
+  end
+
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.

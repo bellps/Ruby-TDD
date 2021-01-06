@@ -22,6 +22,12 @@ describe 'Matchers de comparação' do
         expect(5).to be_between(2,7).exclusive # pode ser 3,4,5 e 6
     end
 
+    # it 'be_between | falhas agregadas', :aggregate_failures do
+    #     expect(6).to be_between(2,7).inclusive 
+    #     expect(2).to be_between(2,7).exclusive 
+    #     expect(5).not_to be_between(2,7).exclusive
+    # end
+
     it 'match' do
         expect("fulano@hotmail.com").to match(/..@../)
     end

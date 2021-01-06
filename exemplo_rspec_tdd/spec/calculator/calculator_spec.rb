@@ -2,6 +2,16 @@ require 'calculator'
 
 RSpec.describe Calculator, "(uma calculadora)" do
 
+    # hooks: eles vão aparecer um embaixo do outro, mas estão sendo executados na ordem certa sim
+    # before(:each) do
+    #     puts "anteS DE CADA TESTE"
+    # end
+
+    # after(:each) do
+    #     puts "DEPOIS DE CADA TESTE"
+    # end
+    # ============================================================================================
+
     #subject(:calc) {described_class.new()} para usar o calc como instancia
     context '#sum' do
         it 'with positive numbers' do
