@@ -33,6 +33,10 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 RSpec.configure do |config|
+
+  # Time helper -> permite que você mude a data na aplicação (avançar/voltar um dia)
+  config.include ActiveSupport::Testing::TimeHelpers
+
   #FactoryBot
   config.include FactoryBot::Syntax::Methods
   
