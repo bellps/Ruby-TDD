@@ -3,7 +3,6 @@ require_relative '../support/new_customer_form'
 
 RSpec.feature "Customers", type: :feature, js: true do
   let(:new_customer_form) { NewCustomerForm.new }
-
   it 'Visit the index', vcr: { cassette_name: 'capybara/teste', :record => :new_episodes } do
     visit(customers_path)
     #save_and_open_screenshot
