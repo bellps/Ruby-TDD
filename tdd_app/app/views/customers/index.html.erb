@@ -1,0 +1,25 @@
+<% if flash[:notice] %>
+    <div id='notice'>
+        <%= flash[:notice] %>
+    </div>
+<% end %>
+
+<h1>Listando clientes</h1>
+
+<%= link_to  "Novo cliente", new_customer_path %>
+
+<table>
+    <tr>
+        <th>Nome</th>
+        <th>Email</th>
+    </tr>
+    <% @customers.each do |customer| %>
+        <tr>
+            <td> <%= customer.name %> </td>
+            <td> <%= customer.email %> </td>
+            <td> <%= link_to  "Ver", customer_path(customer) %> </td>
+            <td> <%= link_to  "Editar", edit_customer_path(customer) %> </td>
+            <td> <%= link_to  "Excluir", customer, method: :delete, data: { confirm: 'Tem certeza?'} %> </td
+        </tr>
+    <% end %>
+</table>

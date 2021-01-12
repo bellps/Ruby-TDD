@@ -1,0 +1,22 @@
+<% if flash[:notice] %>
+    <div id='notice'>
+        <%= flash[:notice] %>
+    </div>
+<% end %>
+
+<h3>Cliente</h3>
+<hr>
+<p>
+    <strong>Nome:</strong> 
+    <%= @customer.name %>
+</p>
+<p>
+    <strong>Email:</strong> 
+    <%= @customer.email %>
+</p>
+<p>
+    <strong>Telefone:</strong> 
+    <%= @customer.phone %>
+</p>
+<%= link_to  "Editar", edit_customer_path(@customer) %>
+<%= link_to  "Voltar", customers_path %>
